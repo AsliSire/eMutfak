@@ -1,0 +1,49 @@
+<div>
+    <div class="login d-flex align-items-center justify-content-center">
+        <div class="col-lg-6">
+            <div class="card" style="border: none !important;" style="background-color: #3273b5;">
+                <div style="text-align: center; padding-top: 2em;"><img src="assets/images/Logo-Emutfakci.png"></div>
+                <div class="card-body p-lg-5">
+                    <form autocomplete="off" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label for="username" class="login-label">Kullanıcı Adı</label>
+                            <input type="text" class="form-control" formControlName="username"
+                                [ngClass]="{ 'is-invalid': submitted && f.username.errors }" [autofocus] />
+                            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                                <div *ngIf="f.username.errors.required">
+                                    Kullanıcı adı zorunludur
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="login-label">Parola</label>
+                            <input type="password" class="form-control" formControlName="password"
+                                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" (focus)="passcontrol()"/>
+                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                <div *ngIf="f.password.errors.required">Parola zorunludur</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password_control" class="login-label">Parola Tekrar</label>
+                            <input type="password" class="form-control" formControlName="password_control"
+                                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" (focus)="passcontrol()"/>
+                            <div *ngIf="submitted && f.password_control.errors" class="invalid-feedback">
+                                <div *ngIf="f.password_control.errors.required">Parola zorunludur</div>
+                            </div>
+                        </div>
+                        <button [disabled]="loading" class="btn btn-lg btn-block mt-4" style="background-color: #b4b532; color: #ffffff;">
+                            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                            Giriş Yap
+                        </button>
+                        <div *ngIf="error" class="alert alert-danger mt-3 mb-0">
+                            Lütfen kullanıcı adı ve şifrenizi kontrol ediniz.
+                        </div>
+                        <div *ngIf="control" class="alert alert-danger mt-3 mb-0">
+                            Şifreler uyuşmamaktadır.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

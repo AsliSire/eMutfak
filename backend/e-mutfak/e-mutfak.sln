@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "e-mutfak", "e-mutfak.csproj", "{AD256E14-1EE7-41B6-94D7-CE13190C9FC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "..\Models\Models.csproj", "{41FE15B4-D09F-4314-94E3-49EDEF511AD6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD256E14-1EE7-41B6-94D7-CE13190C9FC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD256E14-1EE7-41B6-94D7-CE13190C9FC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD256E14-1EE7-41B6-94D7-CE13190C9FC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD256E14-1EE7-41B6-94D7-CE13190C9FC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41FE15B4-D09F-4314-94E3-49EDEF511AD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41FE15B4-D09F-4314-94E3-49EDEF511AD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41FE15B4-D09F-4314-94E3-49EDEF511AD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41FE15B4-D09F-4314-94E3-49EDEF511AD6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1292EE1-7524-4485-91EE-05F1CA07AD2F}
+	EndGlobalSection
+EndGlobal

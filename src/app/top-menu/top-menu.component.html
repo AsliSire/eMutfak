@@ -1,0 +1,22 @@
+<div *ngIf="isLogin" class="bs-example">
+    <nav class="navbar navbar-expand-md" style="background-color: #1976d2 !important;">
+        <a routerLink="vatandas-memnuniyet-takip-formu">
+            <img width="100" alt="Angular Logo"
+              src="assets/images/Logo-Emutfakci.png"/></a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span style="color: white !important;"><mat-icon style="font-size: 42px">menu</mat-icon></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+<!--             <div class="navbar-nav">
+                <a class="nav-link active" href="vatandas-memnuniyet-takip-formu" style="color: white;">Vatandaş Memnuniyet Takip Formu</a> 
+                <a class="nav-link active" href="tamamlanmis-formlar" style="color: white;">Tamamlanmış Formlar</a>
+                <a class="nav-link active" href="oneri-sikayet-formu" style="color: white;">Öneri/Şikayet</a>
+            </div> -->
+            <div class="navbar-nav ml-auto">
+                <span style="margin-right: 2em;color: white;">{{username}}</span>
+                <span style="cursor: pointer; margin-right: 2em;color: white;" (click)="logout()"><mat-icon>power_settings_new</mat-icon></span>
+            </div>
+        </div>
+    </nav>
+</div>

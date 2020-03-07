@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+td{
+    padding: 8px !important;
+}
+.dataTables_wrapper .dataTables_length {
+display: none;
+}
+.dataTables_wrapper .dataTables_filter {
+float: left;
+text-align: left;
+}
+
+/*
+   server-side-angular-way.component.css
+*/
+.no-data-available {
+    text-align: center;
+  }
+  
+  /*
+     src/styles.css (i.e. your global style)
+  */
+  .dataTables_empty {
+    display: none;
+  }
+
+  .invalid{
+      border-color: crimson;
+  }
+
+  .mat-blue{
+    background-color: #1976d2;
+    color: #ffffff;
+}
+
+.mat-white{
+    background-color: #ffffff;
+    color: #1976d2;
+}
+
+.mat-yellow{
+    background-color: #e7d893;
+    color: #333;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  opacity: 0;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+ }
+ .show-scrollTop {
+  opacity: 1;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+ }
+
+ .card{
+   border: none;
+ }
+
+ .card-header{
+   background-color: #ffffff;
+ }
+ 
+ .login-label{
+   color: #ffffff;
+ }
+
+ .dt-buttons{
+   display: none !important;
+ }

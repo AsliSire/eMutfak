@@ -1,0 +1,78 @@
+<div class="card">
+    <div class="card-body d-flex flex-column">
+        <form [formGroup]="fg_product" (ngSubmit)="SaveProduct()" class="md-float-material" novalidate>
+            <div class=" row col-sm-12 col-md-12 col-lg-12">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="row">
+                        <label class="col-sm-12 col-lg-5 col-md-5 col-form-label">TCKN:</label>
+                        <div class="col-sm-12 col-lg-7 col-md-7">
+                            <div class="input-group input-group-primary input-group-sm">
+                                <input id="rec_tck_no" name="rec_tck_no" formControlName="rec_tck_no" #rec_tck_no
+                                    type="text" class="input-sm form-control thresold-i" autocomplete="off" maxlength="11">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="col-sm-12 col-lg-5 col-md-5 col-form-label">Ad Soyad:</label>
+                        <div class="col-sm-12 col-lg-7 col-md-7">
+                            <div class="input-group input-group-primary input-group-sm">
+                                <input id="rec_name_surname" name="rec_name_surname" formControlName="rec_name_surname"
+                                    #rec_name_surname type="text" class="input-sm form-control thresold-i"
+                                    autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="col-sm-12 col-lg-5 col-md-5 col-form-label">Ürün Fiyatı:</label>
+                        <div class="col-sm-12 col-lg-7 col-md-7">
+                            <div class="input-group input-group-primary input-group-sm" aria-describedby="basic-addon2">
+                                <input id="prd_price" name="prd_price" formControlName="prd_price" #prd_price
+                                    type="text" class="input-sm form-control thresold-i" autocomplete="off" (focusout)="format($event.target.value)">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="basic-addon2">TL</span>
+                                      </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="col-sm-12 col-lg-5 col-md-5 col-form-label">Birim:</label>
+                        <div class="col-sm-12 col-lg-7 col-md-7">
+                            <div class="input-group input-group-primary input-group-sm">
+                                <select id="prd_currency_unit" name="prd_currency_unit" formControlName="prd_currency_unit" #prd_currency_unit
+                                class="input-sm form-control thresold-i" (change)="Hesaplama(prd_price.value, prd_currency_unit.value)" >
+                                <option value="1">TL</option>
+                                <option value="2">DOLAR</option>
+                                <option value="3">EURO</option>
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="col-sm-12 col-lg-5 col-md-5 col-form-label">Hesaplanmış Fiyat:</label>
+                        <div class="col-sm-12 col-lg-7 col-md-7">
+                            <div class="input-group input-group-primary input-group-sm">
+                                <input id="prd_calculated_value" name="prd_calculated_value"
+                                    formControlName="prd_calculated_value" #prd_calculated_value type="text"
+                                    class="input-sm form-control thresold-i" autocomplete="off" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row col-sm-12 col-md-12 col-lg-12 align-self-end" style="display: block; margin-top: 2em;">
+                    <div class="row" style="right: 0;">
+                        <div class="col-sm-6 col-lg-6 col-md-6">
+                            <button mat-raised-button id="btn_kaydet" name="btn_kaydet" type="submit"
+                                class="button-sm form-control thresold-i mat- white" [disabled]="!fg_product.valid">Kaydet</button>
+                        </div>
+                        <div class="col-sm-6 col-lg-6 col-md-6">
+                            <button mat-raised-button id="btn_temizle" name="btn_temizle" type="button"
+                                class="button-sm form-control thresold-i mat-blue"
+                                (click)="closeModal()">Kapat</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

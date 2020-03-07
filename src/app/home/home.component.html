@@ -1,0 +1,37 @@
+<div class="table-responsive">
+    <table class="table  table-hover table-fixed">
+      <thead>
+        <tr>
+            <th class="araclar"></th>
+            <th>TCKN</th>
+            <th>Ad Soyad</th>
+            <th>Fiyat</th>
+            <th>Birimi</th>
+            <th>Hesaplanmış Fiyat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of product">
+            <td>
+                <mat-icon (click)="EditProduct(item.id)" style="cursor: pointer; color: #1976d2;">edit
+                </mat-icon>
+                <mat-icon color="warn" (click)="DeleteProduct(item.id)" style="cursor: pointer">delete</mat-icon>
+            </td>
+            <td>{{item.rec_tck_no}}</td>
+            <td>{{item.rec_name_surname}}</td>
+            <td>{{item.prd_price}}</td>
+            <td>{{item.cur_name}}</td>
+            <td>{{item.prd_calculated_value}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+<div class="scroll-to-top" [ngClass]="{'show-scrollTop': windowScrolled}">
+    <span (click)="scrollToTop()">
+        <img src="assets/images/arrow-up-32.png">
+    </span>
+</div>
+<div class="col-sm-4 col-lg-4 col-md-4">
+    <button mat-raised-button id="logout-button" (click)="openModal()">Add New</button>
+</div>
