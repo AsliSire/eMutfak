@@ -1,5 +1,12 @@
 # eMutfak
 
+Emutfak/backend/e-mutfak/eMutfak.sln dosyasını MS Visual Studio ile derleyiniz.
+
+Emutfak kök klasörünü VS Code ile açıp, terminal>yeni terminalde "npm install" komutununu çalıştırarak node modules içine gerekli paketleri indiriniz.
+Bu işlem bitince, "ng serve --o" komutunu çalıştırıp projeyi derleyiniz.
+
+# eMutfak
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
 
 ## Development server
